@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xReact</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- javascript -->
+    <script type=module>
+        import createElement from "./src/createElement.js";
+        import render from "./src/render.js";
+
+        window.__DEV__ = true;
+        window.__PROFILE__ = true;
+
+        render(
+            createElement('div', {className: 'hello'}, 'hello world'),
+            document.getElementById('root')
+        )
+
+    </script>
+</body>
+
+</html>
